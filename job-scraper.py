@@ -14,7 +14,7 @@ my_data = []
 # soup = bs(data.text, 'html.parser')
 
 parser = 'lxml'  # or 'lxml' (preferred) or 'html5lib', if installed
-resp = urllib2.urlopen("https://www.finn.no/job/fulltime/search.html?published=1&q=biologi&sort=RELEVANCE")
+resp = urllib2.urlopen("https://www.finn.no/job/fulltime/search.html?published=1&q=utvikler&sort=RELEVANCE")
 soup = bs(resp, parser, from_encoding = resp.info().get_param('charset'))
 
 results = soup.find_all('div', class_ = 'ads__unit__content')
